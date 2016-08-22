@@ -2,6 +2,7 @@ android/build/
 android/libs/
 android/bin/
 android/build.properties
+iphone/build/
 bin/
 .classpath
 .DS_Store
