@@ -154,7 +154,6 @@
 		E88EA0F51ACD5A0C00B1BFA6 /* SVGViewSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = E88EA0711ACD598C00B1BFA6 /* SVGViewSpec.h */; };
 		E88EA0F61ACD5A0D00B1BFA6 /* Text.h in Headers */ = {isa = PBXBuildFile; fileRef = E88EA0721ACD598C00B1BFA6 /* Text.h */; };
 		E88EA0F71ACD5A0D00B1BFA6 /* TinySVGTextAreaElement.h in Headers */ = {isa = PBXBuildFile; fileRef = E88EA0731ACD598C00B1BFA6 /* TinySVGTextAreaElement.h */; };
-		E88EA0F91ACD5A7300B1BFA6 /* libSVGKit-iOS.1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E88EA0F81ACD5A7300B1BFA6 /* libSVGKit-iOS.1.2.0.a */; };
 		E8F5D20A1ACC0D76001786D3 /* ComGeraudbourdinSvgviewView.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F5D2061ACC0D76001786D3 /* ComGeraudbourdinSvgviewView.h */; };
 		E8F5D20B1ACC0D76001786D3 /* ComGeraudbourdinSvgviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F5D2071ACC0D76001786D3 /* ComGeraudbourdinSvgviewView.m */; };
 		E8F5D20C1ACC0D76001786D3 /* ComGeraudbourdinSvgviewViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F5D2081ACC0D76001786D3 /* ComGeraudbourdinSvgviewViewProxy.h */; };
@@ -312,14 +311,12 @@
 		E88EA0711ACD598C00B1BFA6 /* SVGViewSpec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVGViewSpec.h; sourceTree = "<group>"; };
 		E88EA0721ACD598C00B1BFA6 /* Text.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Text.h; sourceTree = "<group>"; };
 		E88EA0731ACD598C00B1BFA6 /* TinySVGTextAreaElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TinySVGTextAreaElement.h; sourceTree = "<group>"; };
-		E88EA0F81ACD5A7300B1BFA6 /* libSVGKit-iOS.1.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libSVGKit-iOS.1.2.0.a"; path = "SVGKit/libSVGKit-iOS.1.2.0.a"; sourceTree = "<group>"; };
 		E8F5D2061ACC0D76001786D3 /* ComGeraudbourdinSvgviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComGeraudbourdinSvgviewView.h; path = Classes/ComGeraudbourdinSvgviewView.h; sourceTree = "<group>"; };
 		E8F5D2071ACC0D76001786D3 /* ComGeraudbourdinSvgviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComGeraudbourdinSvgviewView.m; path = Classes/ComGeraudbourdinSvgviewView.m; sourceTree = "<group>"; };
 		E8F5D2081ACC0D76001786D3 /* ComGeraudbourdinSvgviewViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComGeraudbourdinSvgviewViewProxy.h; path = Classes/ComGeraudbourdinSvgviewViewProxy.h; sourceTree = "<group>"; };
 		E8F5D2091ACC0D76001786D3 /* ComGeraudbourdinSvgviewViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComGeraudbourdinSvgviewViewProxy.m; path = Classes/ComGeraudbourdinSvgviewViewProxy.m; sourceTree = "<group>"; };
 		E8F5D3191ACC101C001786D3 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		E8F5D31B1ACC1027001786D3 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		E8F5D31D1ACC1034001786D3 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		E8F5D31F1ACC103D001786D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E8F5D3211ACC1045001786D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E8F5D3231ACC104E001786D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -367,13 +364,11 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5586E7B61E4CA62100324B10 /* libxml2.dylib */,
-				5586E7B41E4CA3E700324B10 /* libxml2.tbd */,
-				E88EA0F81ACD5A7300B1BFA6 /* libSVGKit-iOS.1.2.0.a */,
+				554356611D6B36270078EA1D /* libxml2.2.dylib */,
+				55CC454B1D6B44E100D819D6 /* libSVGKit-iOS.2.0.0.a */,
 				E8F5D3231ACC104E001786D3 /* UIKit.framework */,
 				E8F5D3211ACC1045001786D3 /* CoreGraphics.framework */,
 				E8F5D31F1ACC103D001786D3 /* QuartzCore.framework */,
-				E8F5D31D1ACC1034001786D3 /* libxml2.dylib */,
 				E8F5D31B1ACC1027001786D3 /* CoreImage.framework */,
 				E8F5D3191ACC101C001786D3 /* CoreText.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
@@ -711,7 +706,10 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				KnownAssetTags = (
+					New,
+				);
+				LastUpgradeCheck = 0600;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "svg-ios" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -805,14 +803,20 @@
 					"-DDEBUG",
 					"-DTI_POST_1_2",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-liconv",
+					"-lz",
+					"-lc++",
+					"-dylib",
+				);
 				PRODUCT_NAME = ComGeraudbourdinSvgview;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
 				TITANIUM_SDK = "/Users/ani.sinanaj/Library/Application Support/Titanium/mobilesdk/osx/$(TITANIUM_SDK_VERSION)";
-				TITANIUM_SDK_VERSION = "6.0.0.CAFFEINA-2";
+				TITANIUM_SDK_VERSION = "6.0.4.CAFFEINA-1";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -845,12 +849,18 @@
 					"$(PROJECT_DIR)/SVGKit",
 				);
 				OTHER_CFLAGS = "-DTI_POST_1_2";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-liconv",
+					"-lz",
+					"-lc++",
+					"-dylib",
+				);
 				PRODUCT_NAME = ComGeraudbourdinSvgview;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
 				TITANIUM_SDK = "/Users/ani.sinanaj/Library/Application Support/Titanium/mobilesdk/osx/$(TITANIUM_SDK_VERSION)";
-				TITANIUM_SDK_VERSION = "6.0.0.CAFFEINA-2";
+				TITANIUM_SDK_VERSION = "6.0.4.CAFFEINA-1";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
