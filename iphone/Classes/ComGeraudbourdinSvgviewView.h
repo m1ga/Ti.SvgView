@@ -1,7 +1,7 @@
 #import "TiUIView.h"
 @interface ComGeraudbourdinSvgviewView: TiUIView {
     UIView *square;
-    NSString *svgFile ;
+    NSString *svgFile;
     float boundsWidth;
     float boundsHeight;
 
