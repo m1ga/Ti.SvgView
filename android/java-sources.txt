@@ -1,0 +1,3 @@
+"/Users/ani.sinanaj/Mobile/Ti.SvgView/android/build/generated/java/com/geraudbourdin/svgview/SvgViewBootstrap.java"
+"/Users/ani.sinanaj/Mobile/Ti.SvgView/android/src/com/geraudbourdin/svgview/SvgViewModule.java"
+"/Users/ani.sinanaj/Mobile/Ti.SvgView/android/src/com/geraudbourdin/svgview/ViewProxy.java"
