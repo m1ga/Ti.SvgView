@@ -10,33 +10,24 @@ package com.geraudbourdin.svgview;
 
 import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.annotations.Kroll;
-
-import org.appcelerator.titanium.TiApplication;
 import org.appcelerator.kroll.common.TiConfig;
+import org.appcelerator.titanium.TiApplication;
 
+@Kroll.module(name = "SvgView", id = "com.geraudbourdin.svgview")
+public class SvgViewModule extends KrollModule {
 
-@Kroll.module(name="SvgView", id="com.geraudbourdin.svgview")
-public class SvgViewModule extends KrollModule
-{
+  // Standard Debugging variables
+  private static final String LCAT = "SvgViewModule";
+  private static final boolean DBG = TiConfig.LOGD;
 
-	// Standard Debugging variables
-	private static final String LCAT = "SvgViewModule";
-	private static final boolean DBG = TiConfig.LOGD;
+  // You can define constants with @Kroll.constant, for example:
+  // @Kroll.constant public static final String EXTERNAL_NAME = value;
 
-	// You can define constants with @Kroll.constant, for example:
-	// @Kroll.constant public static final String EXTERNAL_NAME = value;
+  public SvgViewModule() { super(); }
 
-	public SvgViewModule()
-	{
-		super();
-	}
-
-	@Kroll.onAppCreate
-	public static void onAppCreate(TiApplication app)
-	{
-		//Log.d(LCAT, "inside onAppCreate");
-		// put module init code that needs to run when the application is created
-	}
-
+  @Kroll.onAppCreate
+  public static void onAppCreate(TiApplication app) {
+    // Log.d(LCAT, "inside onAppCreate");
+    // put module init code that needs to run when the application is created
+  }
 }
-
