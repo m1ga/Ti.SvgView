@@ -34,8 +34,18 @@ if (OS_ANDROID) {
     	height: 100,
     	top: 360,
     	left: 0
-        win.add(svg2);
     });
+    win.add(svg2);
+
+    var img = Ti.UI.createImageView({
+    	width: 100,
+    	height: 100,
+    	top: 360,
+    	right: 0
+    });
+    var blob = svgView.toBlob("/test.svg");
+    img.image = blob;
+    win.add(img);
 }
 
 win.add(svg1);
@@ -66,21 +76,23 @@ var svgImage = svg.toImage().media;
 $.buttonSvg.setImage(svgImage);
 ```
 
-## Methods:
+## Properties:
 
 * image (String): URL of a file. Android supports inline SVGs too (has to start with `<`)
 
+## Methods:
+
+* toBlob (String, returns TiBlob): URL of a file/SVG string. Converts SVG to a blob (Android only).
+
 
 ## Building module
-Before importing to the Appcelerator Studio or/and building module you must
-create this files from corresponding examples and fill their contents to your
-environment paths:
 
- * `android/build.properties`
- * `.classpath`
+Go into `android/` or `ios/` and run:
 
- Copy/paste and remove `.example` from file name.
-
+```
+ti build -p android --build-only
+ti build -p ios --build-only
+```
 
 
 ## License

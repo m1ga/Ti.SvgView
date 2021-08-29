@@ -8,10 +8,24 @@
  */
 package com.geraudbourdin.svgview;
 
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.PictureDrawable;
+
+import com.caverock.androidsvg.SVG;
+import com.caverock.androidsvg.SVGParseException;
+
 import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.annotations.Kroll;
+import org.appcelerator.kroll.common.Log;
 import org.appcelerator.kroll.common.TiConfig;
 import org.appcelerator.titanium.TiApplication;
+import org.appcelerator.titanium.TiBlob;
+import org.appcelerator.titanium.io.TiBaseFile;
+import org.appcelerator.titanium.io.TiFileFactory;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 @Kroll.module(name = "SvgView", id = "com.geraudbourdin.svgview")
 public class SvgViewModule extends KrollModule {
@@ -29,5 +43,47 @@ public class SvgViewModule extends KrollModule {
   public static void onAppCreate(TiApplication app) {
     // Log.d(LCAT, "inside onAppCreate");
     // put module init code that needs to run when the application is created
+  }
+
+  @Kroll.method
+  public TiBlob toBlob(String image) {
+    InputStream contentFile = null;
+    SVG svgImage = null;
+
+    if (image.charAt(0) == '<') {
+      // Load string
+      try {
+        svgImage = SVG.getFromString(image);
+      } catch (SVGParseException e) {
+        Log.d(LCAT, "Failed to set svg from input stream.");
+      }
+    } else {
+      // Load file
+      String url = resolveUrl(null, image);
+      TiBaseFile file =
+              TiFileFactory.createTitaniumFile(new String[] {url}, false);
+      try {
+        contentFile = file.getInputStream();
+      } catch (IOException e) {
+        Log.d(LCAT, "Failed to get input stream.");
+      }
+
+      try {
+        svgImage = SVG.getFromInputStream(contentFile);
+      } catch (SVGParseException e) {
+        Log.d(LCAT, "Failed to set svg from input stream.");
+      }
+    }
+
+    if (svgImage != null && svgImage.getDocumentWidth() != -1) {
+        Bitmap  newBM = Bitmap.createBitmap((int) Math.ceil(svgImage.getDocumentWidth()),
+                (int) Math.ceil(svgImage.getDocumentHeight()),
+                Bitmap.Config.ARGB_8888);
+        Canvas bmcanvas = new Canvas(newBM);
+        svgImage.renderToCanvas(bmcanvas);
+        return TiBlob.blobFromImage(newBM);
+    } else {
+      return null;
+    }
   }
 }
