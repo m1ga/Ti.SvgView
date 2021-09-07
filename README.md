@@ -7,6 +7,7 @@ This module simply create a view from an svg file by exposing the androidsvg-1.2
 ## Quick Start
 
 ### Get it [![gitTio](http://gitt.io/badge.png)](http://gitt.io/component/com.geraudbourdin.svgview)
+
 Download the latest distribution ZIP-file and consult the [Titanium Documentation](http://docs.appcelerator.com/titanium/latest/#!/guide/Using_a_Module) on how install it, or simply use the [gitTio CLI](http://gitt.io/cli):
 
 `$ gittio install com.geraudbourdin.svgview`
@@ -46,6 +47,9 @@ if (OS_ANDROID) {
     var blob = svgView.toBlob("/test.svg");
     img.image = blob;
     win.add(img);
+
+		var blob2 = svgView.toBlob('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="266.893px" height="266.895px" viewBox="0 0 266.893 266.895" enable-background="new 0 0 266.893 266.895" xml:space="preserve"><path id="Blue_1_" fill="#3C5A99" d="M248.082,262.307c7.854,0,14.223-6.369,14.223-14.225V18.812  c0-7.857-6.368-14.224-14.223-14.224H18.812c-7.857,0-14.224,6.367-14.224,14.224v229.27c0,7.855,6.366,14.225,14.224,14.225  H248.082z"/><path id="f" fill="#FFFFFF" d="M182.409,262.307v-99.803h33.499l5.016-38.895h-38.515V98.777c0-11.261,3.127-18.935,19.275-18.935  l20.596-0.009V45.045c-3.562-0.474-15.788-1.533-30.012-1.533c-29.695,0-50.025,18.126-50.025,51.413v28.684h-33.585v38.895h33.585  v99.803H182.409z"/></svg>');
+		console.log(blob2.width + " " + blob2.height);
 }
 
 win.add(svg1);
@@ -58,7 +62,6 @@ You can change your file dynamically with the setImage(path) function.
 var image = 'android.svg';
 svg.setImage(image);
 ```
-
 
 Or simply use it to set an image to a button :
 
@@ -78,24 +81,21 @@ $.buttonSvg.setImage(svgImage);
 
 ## Properties:
 
-* image (String): URL of a file. Android supports inline SVGs too (has to start with `<`)
+-   image (String): URL of a file. Android supports inline SVGs too (has to start with `<`)
 
 ## Methods:
 
-* toBlob (String, returns TiBlob): URL of a file/SVG string. Converts SVG to a blob (Android only).
-
+-   toBlob (String, returns TiBlob): URL of a file/SVG string. Converts SVG to a blob (Android only).
 
 ## Building module
 
 Go into `android/` or `ios/` and run:
 
-```
-ti build -p android --build-only
-ti build -p ios --build-only
-```
-
+    ti build -p android --build-only
+    ti build -p ios --build-only
 
 ## License
+
 The MIT License (MIT)
 
 Copyright © 2015 Géraud Bourdin
