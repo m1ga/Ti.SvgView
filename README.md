@@ -56,11 +56,11 @@ win.add(svg1);
 win.open();
 ```
 
-You can change your file dynamically with the setImage(path) function.
+You can change your file dynamically with the `.image=path` function.
 
 ```javascript
 var image = 'android.svg';
-svg.setImage(image);
+svg.image = image;
 ```
 
 Or simply use it to set an image to a button :
@@ -76,7 +76,7 @@ var svg = svgView.createView({
 });
 
 var svgImage = svg.toImage().media;
-$.buttonSvg.setImage(svgImage);
+$.buttonSvg.image = svgImage;
 ```
 
 ## Properties:
